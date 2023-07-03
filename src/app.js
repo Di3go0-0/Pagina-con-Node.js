@@ -13,6 +13,8 @@ app.set("views", join(_dirname, 'views'))
 app.set('view engine', 'ejs'); //le decimos a la aplicación que vamos a estar usando archivos .ejs (son html que permiten manejos de variables)
 app.use(indexRoutes);
 
+app.use(express.static(join(_dirname,"public")))
+
 
 
 const PUERTO = process.env.PORT || 3000;//le decimos que al constante PUERTO sea el puerto que le asigna el browser o el 3000
